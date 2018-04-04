@@ -27,6 +27,9 @@
       #cover .cover-pain { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; }
       #cover-symbol { position: absolute; z-index: 2; top: 0; left: 0; width: 100%; transition: opacity 0.3s; }
       #cover h2 { position: relative; z-index: 3; margin:-36.6px 0 0; color:#000; font-size:70px; }
+      .code-in-list { margin: -50px 0 0 154px; }
+      .code-in-list code { padding: 0 !important; }
+      .code-in-list code:before { display: none; }
     </style>
   </section>
 
@@ -46,6 +49,7 @@
     <ul>
       <li><strong>Стадия I</strong>: Подключение полной версии модульного фреймворка вне&nbsp;зависимости от&nbsp;необходимости.</li>
       <li><strong>Стадия II</strong>: Подключение 2-х и более фреймворков.</li>
+      <li><strong>Стадия III</strong>: Подключение 2-х фреймворков схожей функциональности.</li>
     </ul>
   </section>
 
@@ -54,7 +58,8 @@
     <p>Возможно доброкачественное течение.</p>
     <ul>
       <li>Админки, внутренние сервисы.</li>
-      <li>Прототипирование «в браузере».</li>
+      <li>Прототипирование в браузере.</li>
+      <li>Необходимость быстрого старта.</li>
       <li>Отсутствие у заказчика адекватных финансовых возможностей или&nbsp;<i>Демпингоз</i>.</li>
     </ul>
   </section>
@@ -64,17 +69,57 @@
     <ul>
       <li>Отказ от фреймворков.</li>
       <li>Работа с препроцессорными версиями фреймворков.</li>
+      <li>Удаление неиспользуемого кода.</li>
+    </ul>
+    <hr>
+    <ul>
+      <li>Конкатенация файлов.</li>
+      <li>Включение gzip на сервере.</li>
     </ul>
   </section>
 
   <section class="slide">
-    <h2>Иконочная шрифтома</h2>
-    <p>Text</p>
+    <h2>Реквестома</h2>
+    <img src="pictures/requests01.png" alt="">
+  </section>
+
+  <section class="slide">
+    <h2>Реквестома: метастазы</h2>
+    <ul>
+      <li>Изображения.</li>
+      <li>Шрифты.</li>
+      <li>Стилевые файлы.</li>
+      <li>Скрипты.</li>
+    </ul>
+    <p>Возможно доброкачественное течение.</p>
+  </section>
+
+  <section class="slide">
+    <h2>Реквестома: лечение</h2>
+    <ul>
+      <li>Конкатенация, спрайты.</li>
+      <li>Переход на HTTP2.</li>
+    </ul>
   </section>
 
   <section class="slide">
     <h2>Автоматизома и Ваннилома</h2>
-    <p>Text</p>
+    <img src="pictures/babies.jpg" alt="" style="margin-top: -40px">
+  </section>
+
+  <section class="slide">
+    <h2>Автоматизома и Ваннилома</h2>
+    <p>Как правило, доброкачественное течение. Возможные осложнения:</p>
+    <ul>
+      <li>
+        <pre class="code-in-list">
+          <code>module.js:666</code>
+          <code>    throw err;</code>
+          <code>Error: Cannot...</code>
+        </pre>
+      </li>
+      <li class="next"><img src="pictures/f5.png" alt="" width="300" style="vertical-align: top;"></li>
+    </ul>
   </section>
 
 
