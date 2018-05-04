@@ -6,9 +6,20 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+  <link rel="stylesheet" href="prism/prism.css">
   <style>
+    hr {margin: 1em 0;}
+    img { max-width: 100%; height: auto; }
+    #cover .cover-pain { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; }
+    #cover-symbol { position: absolute; z-index: 2; top: 0; left: 0; width: 100%; transition: opacity 0.3s; }
+    #cover h2 { position: relative; z-index: 3; margin:-36.6px 0 0; color:#000; font-size:70px; }
+    .no-nums code:before { display: none; }
+    .moral { display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 0; }
+    .line-height-small {line-height: 1.2;}
     .slide .shout { font-size: 110px; }
     .slide h2 code { font-size: 0.8em; padding: .05em .2em }
+    .slide pre code { width: calc(100% + 100px + 70px); overflow: hidden; text-overflow: ellipsis; line-height: 1.8; }
+    .slide pre { white-space: normal !important; margin: 0 0 1em !important; padding: 0 !important; overflow: visible !important; text-shadow: none !important; }
   </style>
 </head>
 <body class="shower list">
@@ -22,20 +33,6 @@
     <h2>Патология <br>вёрстки</h2>
     <img class="cover-pain" src="pictures/cover-01.jpg" alt="">
     <img id="cover-symbol" src="pictures/cover-02.png" alt="">
-    <style>
-      img { max-width: 100%; height: auto; }
-      #cover .cover-pain { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; }
-      #cover-symbol { position: absolute; z-index: 2; top: 0; left: 0; width: 100%; transition: opacity 0.3s; }
-      #cover h2 { position: relative; z-index: 3; margin:-36.6px 0 0; color:#000; font-size:70px; }
-      .no-nums code:before { display: none; }
-      .moral { display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 0; }
-    </style>
-  </section>
-
-
-
-  <section class="slide">
-    <h2 class="shout">Опухоли проекта</h2>
   </section>
 
   <section class="slide">
@@ -114,21 +111,6 @@
     <img src="pictures/babies.jpg" alt="" style="width: 90%; margin-top: -40px;">
   </section>
 
-<!--   <section class="slide">
-    <h2>Автоматизома и Ваниллоз: клиника</h2>
-    <ul>
-      <li>Новые синтаксисы.</li>
-      <li>
-        <pre class="code-in-list">
-          <code>module.js:666</code>
-          <code>    throw err;</code>
-          <code>Error: Cannot...</code>
-        </pre>
-      </li>
-      <li class="next"><img src="pictures/f5.png" alt="" width="300" style="vertical-align: top;"></li>
-    </ul>
-  </section> -->
-
   <section class="slide">
     <h2>Автоматизома: клиника</h2>
     <pre class="no-nums">
@@ -145,16 +127,16 @@
   <section class="slide">
     <h2>Автоматизома: клиника</h2>
     <pre>
-      <code>[19:10:07] Starting 'style'...</code>
-      <code>[19:10:27] Finished 'style' after <mark>20.32 s</mark></code>
-      <code>[19:10:27] Starting 'js'...</code>
-      <code>[19:10:38] Finished 'js' after <mark>10.54 s</mark></code>
+      <code><span class="comment">[19:10:07]</span> Starting 'style'...</code>
+      <code><span class="comment">[19:10:27]</span> Finished 'style' after <mark>20.32 s</mark></code>
+      <code><span class="comment">[19:10:27]</span> Starting 'js'...</code>
+      <code><span class="comment">[19:10:38]</span> Finished 'js' after <mark>10.54 s</mark></code>
     </pre>
   </section>
 
   <section class="slide">
-    <h2>Осложнение автоматизомы: PostCSS-психоз</h2>
-    <pre class="no-nums">
+    <h2>Осложнение: PostCSS-психоз</h2>
+    <pre class="no-nums  language-css">
       <code>.foo-bar {</code>
       <code>    text: tomato bold center uppercase 1.25em 1.5 .05em;</code>
       <code>    margin: * auto;</code>
@@ -176,13 +158,12 @@
   </section>
 
   <section class="slide">
-    <h2>Ваниллома: клиника</h2>
+    <h2>Ваниллоз: клиника</h2>
     <ul>
-      <li>Не используем процессинг стилей и скриптов (на этапе разработки(?)).</li>
-      <li>Не используем фреймворки.</li>
-      <li>Не используем спрайты.</li>
-      <li>Обновляем страницу вручную.</li>
-      <li><del>Не пишем код</del></li>
+      <li>Без обработки стилей и скриптов (на этапе разработки(?)).</li>
+      <li>Без фреймворков.</li>
+      <li>Без спрайтов или с ручной/одноразовой сборкой спрайтов.</li>
+      <li>Ручное обновление страницы. <br><img src="pictures/f5.png" alt="" width="300" style="float: right;"></li>
     </ul>
   </section>
 
@@ -190,59 +171,82 @@
     <h2>Автоматизируй всё, что возможно, <br>но не больше!</h2>
   </section>
 
-
-
   <section class="slide">
-    <h2 class="shout">Воспаления</h2>
+    <h2>Дивоспаноз</h2>
+    <pre class="language-html">
+      <code>&lt;div class="card"></code>
+      <code>  &lt;img class="card__img" src="..." alt="Баскетбольный мяч (размер 7)"></code>
+      <code>  &lt;div class="card__title">Баскетбольный мяч (размер 7)&lt;/div></code>
+      <code>  &lt;div class="card__descr">Мяч баскетбольный RBG7 рекомендован для игры в зале и на улице для начинающих спортсменов.&lt;/div></code>
+      <code>  &lt;div class="card__footer"></code>
+      <code>    &lt;span class="card__price">12 €&lt;/span></code>
+      <code>    &lt;span class="card__buy">В корзину&lt;/span></code>
+      <code>  &lt;/div></code>
+      <code>&lt;/div></code>
+    </pre>
   </section>
 
   <section class="slide">
-    <h2>Дивоспаноз</h2>
-    <p>Text</p>
+    <h2><del>Дивоспаноз</del></h2>
+    <pre class="language-html">
+      <code>&lt;article class="card"></code>
+      <code>  &lt;img class="card__img" src="..." alt="Баскетбольный мяч (размер 7)"></code>
+      <code>  &lt;h2 class="card__title">Баскетбольный мяч (размер 7)&lt;/h2></code>
+      <code>  &lt;p class="card__descr">Мяч баскетбольный RBG7 рекомендован для игры в зале и на улице для начинающих спортсменов.&lt;/p></code>
+      <code>  &lt;footer class="card__footer"></code>
+      <code>    &lt;span class="card__price">12 €&lt;/span></code>
+      <code>    &lt;button class="card__buy">В корзину&lt;/button></code>
+      <code>  &lt;/footer></code>
+      <code>&lt;/article></code>
+    </pre>
   </section>
 
   <section class="slide">
     <h2>Острая классянка</h2>
-    <p>Text</p>
+    <pre class="language-html">
+      <code>&lt;nav class="navbar navbar-expand-lg navbar-light bg-light"></code>
+      <code>  …</code>
+      <code>  &lt;form class="form-inline my-2 my-md-1 my-lg-0"></code>
+      <code>    &lt;input class="form-control mr-sm-2 mr-lg-1" type="search" placeholder="Search" aria-label="Search"></code>
+      <code>    &lt;button class="btn btn-outline-success my-2 my-sm-0 my-md-1">Search&lt;/button></code>
+      <code>  &lt;/form></code>
+      <code>&lt;/nav></code>
+    </pre>
   </section>
 
   <section class="slide">
-    <h2>CSS-ипортит</h2>
-    <p>Text</p>
+    <h2><del>Острая классянка</del></h2>
+    <pre class="language-html">
+      <code>&lt;nav class="navbar"></code>
+      <code>  …</code>
+      <code>  &lt;form class="search  navbar__form"></code>
+      <code>    &lt;input class="search__field" type="search" placeholder="Search" aria-label="Search"></code>
+      <code>    &lt;button class="btn  search__btn">Search&lt;/button></code>
+      <code>  &lt;/form></code>
+      <code>&lt;/nav></code>
+    </pre>
   </section>
 
-
-
-  <section class="slide">
-    <h2 class="shout">Синдромы</h2>
+  <section class="slide  moral">
+    <h2>Пишите код так, как будто <br>сопровождать его будет склонный к&nbsp;насилию психопат, который знает, где&nbsp;вы&nbsp;живёте.</h2>
   </section>
 
   <section class="slide">
     <h2>Веб-евангелоз</h2>
     <blockquote>
-      <strong>But fallbacks mean I’m writing the layout twice!</strong> <br>
-      This is only true if you are labouring under the assumption that websites need to look the same in all browsers. Guess what? They don’t.
+      <strong>"But fallbacks mean I’m writing the layout twice!"</strong> <br>
+      <div class="line-height-small">This is only true if you are labouring under the assumption that websites need to look the same in all browsers. Guess what? They don’t.</div>
     </blockquote>
     <hr>
     <blockquote>
-      <strong>Но фолбэки означают, что я пишу раскладку дважды!</strong> <br>
-      Это верно лишь если вы в своей работе исходите из того, что сайты должны одинаково выглядеть во всех браузерах. И знаете что? Это&nbsp;ни&nbsp;к&nbsp;чему.
+      <strong>«Но фолбэки означают, что я пишу раскладку дважды!»</strong> <br>
+      <div class="line-height-small">Это верно лишь если вы в своей работе исходите из того, что сайты должны одинаково выглядеть во всех браузерах. И знаете что? Это&nbsp;ни&nbsp;к&nbsp;чему.</div>
       <div style="text-align: right;">Рейчел Эндрю, <a href="https://rachelandrew.co.uk/archives/2017/07/04/is-it-really-safe-to-start-using-css-grid-layout/">статья про CSS grid</a></div>
     </blockquote>
   </section>
 
   <section class="slide">
-    <h2>Веб-евангелоз</h2>
-    <p>Практика — критерий истины?</p>
-    <div class="next">
-      <h3><strong>CSS grid в продакшене?</strong> Фолбэк на flexbox.</h3>
-      <ul>
-        <li>Удвоение времени на разработку.</li>
-        <li>Удвоение времени на модификацию.</li>
-      </ul>
-      <img src="pictures/mem01.jpg" alt="" class="next" style="width:300px; position: absolute; bottom: 50px; right: 50px;">
-      <p class="next">Разнообразных раскладок мало. <br>Делаем один раз и используем.</p>
-    </div>
+    <img src="pictures/roseglass.jpg" alt="" style="">
   </section>
 
   <section class="slide">
@@ -284,7 +288,7 @@
       <li>Синдром КАПСа и транслит-синдром.</li>
       <li>Пробелотабит.</li>
       <li>Вендорный префиксит.</li>
-      <li>БЭМ головного мозга, синдром Кобленца.</li>
+      <li>БЭМ головного мозга, <a href="https://acss.io/">синдром Кобленца</a>.</li>
       <li>Reactоголизм.</li>
     </ul>
   </section>
@@ -301,6 +305,7 @@
   <div class="progress"></div>
 
   <script src="shower/shower.min.js"></script>
+  <script src="prism/prism.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', function(){
