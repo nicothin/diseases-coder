@@ -44,8 +44,7 @@
     <h2>Бутстрапома: клиника</h2>
     <ul>
       <li><strong>Стадия I</strong>: Подключение полной версии модульного фреймворка вне&nbsp;зависимости от&nbsp;необходимости.</li>
-      <li><strong>Стадия II</strong>: Подключение двух и более фреймворков.</li>
-      <li><strong>Стадия III</strong>: Подключение двух фреймворков схожей функциональности.</li>
+      <li><strong>Стадия II</strong>: Подключение двух и более фреймворков схожей функциональности.</li>
     </ul>
   </section>
 
@@ -56,14 +55,15 @@
       <li>Админки, внутренние сервисы.</li>
       <li>Прототипирование в браузере.</li>
       <li>Необходимость быстрого старта.</li>
-      <li>Отсутствие у заказчика адекватных финансовых возможностей или&nbsp;<i>Демпингоз</i>.</li>
+      <li>Отсутствие у заказчика адекватных финансовых возможностей.</li>
+      <li>Условно: при <i>демпингозе</i>.</li>
     </ul>
   </section>
 
   <section class="slide">
     <h2>Бутстрапома: лечение</h2>
     <ul>
-      <li>Отказ от фреймворков.</li>
+      <li>Отлучение от фреймворков.</li>
       <li>Работа с препроцессорными версиями фреймворков.</li>
       <li>Удаление неиспользуемого кода.</li>
     </ul>
@@ -108,12 +108,12 @@
   </section>
 
   <section class="slide">
-    <h2>Автоматизома и Ваниллоз</h2>
+    <h2>Автоматизит и Ваниллоз</h2>
     <img src="pictures/babies.jpg" alt="" style="width: 90%; margin-top: -40px;">
   </section>
 
   <section class="slide">
-    <h2>Автоматизома: клиника</h2>
+    <h2>Автоматизит: лёгкая форма</h2>
     <pre class="no-nums">
       <code class="comment">nicothin@nicwin10 MINGW64 /d/projects/automatoma (master)</code>
       <code>$ npm start</code>
@@ -126,7 +126,7 @@
   </section>
 
   <section class="slide">
-    <h2>Автоматизома: клиника</h2>
+    <h2>Автоматизит: запущенное состояние</h2>
     <pre>
       <code><span class="comment">[19:10:07]</span> Starting 'style'...</code>
       <code><span class="comment">[19:10:27]</span> Finished 'style' after <mark>20.32 s</mark></code>
@@ -149,7 +149,7 @@
   </section>
 
   <section class="slide">
-    <h2>Автоматизома: лечение</h2>
+    <h2>Автоматизит: лечение</h2>
     <ul>
       <li>Вменяемое описание функциональности.</li>
       <li>Отсутствие переусложнения (минимум языков и синтаксисов).</li>
@@ -181,7 +181,7 @@
       <code>  &lt;div class="card__descr">Мяч баскетбольный RBG7 рекомендован для игры в зале и на улице для начинающих спортсменов.&lt;/div></code>
       <code>  &lt;div class="card__footer"></code>
       <code>    &lt;span class="card__price">12 €&lt;/span></code>
-      <code>    &lt;span class="card__buy">В корзину&lt;/span></code>
+      <code>    &lt;span class="card__buy-btn">В корзину&lt;/span></code>
       <code>  &lt;/div></code>
       <code>&lt;/div></code>
     </pre>
@@ -196,7 +196,7 @@
       <code>  &lt;div class="card__descr">&lt;p>Мяч баскетбольный RBG7 рекомендован для игры в зале и на улице для начинающих спортсменов.&lt;/p>&lt;/div></code>
       <code>  &lt;footer class="card__footer"></code>
       <code>    &lt;span class="card__price">12 €&lt;/span></code>
-      <code>    &lt;button class="card__buy">В корзину&lt;/button></code>
+      <code>    &lt;button class="card__buy-btn">В корзину&lt;/button></code>
       <code>  &lt;/footer></code>
       <code>&lt;/article></code>
     </pre>
@@ -276,33 +276,65 @@
       <code>&lt;/article></code>
     </pre>
     <pre class="language-css">
-      <code>.card h2 { … }</code>
-      <code>h2.card__title { … }</code>
-      <code>.card h2.card__title { … }</code>
+      <code>.card h2 { … }             /* Стадия I */</code>
+      <code>h2.card__title { … }       /* Стадия II */</code>
+      <code>.card h2.card__title { … } /* Стадия III (терминальная) */</code>
     </pre>
   </section>
 
-<!--   <section class="slide">
-    <h2>Аиерархоз</h2>
-    <p>Text</p>
-  </section> -->
+  <section class="slide">
+    <h2><code>!important</code>-мания/-фобия</h2>
+    <pre class="language-css">
+      <code>.card {</code>
+      <code>  font-size: 2rem !important; /* stylelint-disable-line */</code>
+      <code>}</code>
+    </pre>
+  </section>
 
-<!--   <section class="slide">
-    <h2><code>!important</code>омания <br>и <code>!important</code>офобия</h2>
-    <p>Text</p>
-  </section> -->
+  <section class="slide">
+    <h2>Костыли без показаний</h2>
+    <pre class="language-html">
+      <code>&lt;article></code>
+      <code>  &lt;h2>ZX Spectrum 48k&lt;/h2></code>
+      <code>  &lt;div style="background: url(img/zx-48k.jpg)">&lt;/div></code>
+      <code>  &lt;div>Артефакт давно ушедшей эпохи.&lt;/div></code>
+      <code>&lt;/article></code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Инвалидность разметки</h2>
+    <pre class="language-html">
+      <code>&lt;p></code>
+      <code>  Строка 0.</code>
+      <code>  &lt;div>Строка 1.&lt;/div></code>
+      <code>  &lt;div>Строка 2.&lt;/div></code>
+      <code>  Строка 3.</code>
+      <code>&lt;/p></code>
+    </pre>
+  </section>
+
+  <section class="slide">
+    <h2>Думай как браузер</h2>
+    <pre class="language-html">
+      <code>&lt;p>Строка 0.&lt;/p></code>
+      <code>&lt;div>Строка 1.&lt;/div></code>
+      <code>&lt;div>Строка 2.&lt;/div></code>
+      <code>Строка 3.</code>
+      <code>&lt;p>&lt;/p></code>
+    </pre>
+  </section>
 
   <section class="slide">
     <h2>Прочие патологии</h2>
     <ul>
-      <li>Инвалидность разметки.</li>
-      <li class="next">Снижение или отсутствие «рефлексов верстальщика».</li>
+      <li>Снижение или отсутствие «<a href="https://nicothin.pro/page/reflex">рефлексов верстальщика</a>».</li>
       <li class="next">Синдром КАПСа и транслит-синдром.</li>
       <li class="next">Пробелотабоз.</li>
       <li class="next">Вендорный префиксит.</li>
       <li class="next">БЭМ головного мозга.</li>
-      <li class="next">Reactоголизм.</li>
-      <li class="next">jQueryфобия.</li>
+      <li class="next"><b>React</b>оголизм. <b>Vue</b>айеризм. <b>Angular</b>омания.</li>
+      <li class="next">jQuery-фобия.</li>
     </ul>
   </section>
 
